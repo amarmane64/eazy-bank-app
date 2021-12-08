@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+
+  accounts:
+    image: amarmane64/accounts:latest
+    mem_limit: 700m
+    ports:
+      - "8080:8080"
+    networks:
+      - amarmane64-network
+    
+  loans:
+    image: amarmane64/loans:latest
+    mem_limit: 700m
+    ports:
+      - "8090:8090"
+    networks:
+      - amarmane64-network
+    
+  cards:
+    image: amarmane64/cards:latest
+    mem_limit: 700m
+    ports:
+      - "9000:9000"
+    networks:
+      - amarmane64-network
+    
+networks:
+  amarmane64-network:
